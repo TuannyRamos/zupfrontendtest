@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/diegohferraz/zupfrontendtest/issues"
   },
-  "homepage": "https://github.com/diegohferraz/zupfrontendtest#readme"
+  "homepage": "https://github.com/diegohferraz/zupfrontendtest#readme",
+  "dependencies": {
+    "angular": "~1.6.4"
+  }
 }
