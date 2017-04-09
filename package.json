@@ -1,0 +1,19 @@
+{
+  "name": "zupfrontendtest",
+  "version": "1.0.0",
+  "description": "this is a test project designed to show up my skills",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/diegohferraz/zupfrontendtest.git"
+  },
+  "author": "Diego Hernandes Ferraz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/diegohferraz/zupfrontendtest/issues"
+  },
+  "homepage": "https://github.com/diegohferraz/zupfrontendtest#readme"
+}
