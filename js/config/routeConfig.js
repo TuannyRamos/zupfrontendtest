@@ -3,5 +3,9 @@ angular.module("inspireIt").config(function ($routeProvider) {
 		templateUrl: "view/home.html",
 		controller: "inspireItCtrl"
 	});
+	$routeProvider.when("/details", {
+		templateUrl: "view/details.html",
+		controller: "inspireItCtrl"
+	});
 	$routeProvider.otherwise({redirectTo: "/home"});
 });

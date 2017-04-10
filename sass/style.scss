@@ -1,6 +1,332 @@
-body{
-	background-color: #E1E2E1;
-	div {
-		background-color: #00354f;
+@import "partials/reset";
+@import "partials/colors";
+@import "partials/mixins";
+@import "partials/base";
+
+/* ===============================================
+   ================ Desktop Style ================ 
+   =============================================== */
+
+/* ============== HOME PAGE STYLES ============== */  
+
+.shots-list {
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    .shot{
+    	border: 1px solid $primary-green;
+	    background-color: $grey;
+	    flex-direction: column;
+	    margin: 30px 10px;
+	    overflow: hidden;
+	    width: 22%;
+	    @include border-radius(4px);
+
+	    h1{
+	    	background-color: #d8f46b;
+		    font-size: 1.2em;
+		    margin-bottom: 10px;
+		    padding: 10px;
+		    text-align: center;
+	    }
+
+	    p{
+	    	color: $dark-grey;
+		    font-size: 0.8em;
+		    margin-bottom: 10px;
+		    padding: 0 10px;
+		    strong{
+			    color: $black;
+		    }
+	    }
+
+	    button{
+	    	background-color: $primary-green;
+		    border: 0 none;
+		    color: $primary-blue;
+		    cursor: pointer;
+		    font-weight: bold;
+		    padding: 15px;
+		    text-transform: uppercase;
+	    }
+
+   		.shot-image {
+   			margin: 0 10px;
+   			img{
+   				width: 100%;
+   			}
+		}
+
+		.shot-info{
+			margin: 10px;
+			li{
+				float: left;
+				text-align: center;
+				width: 50%
+			}
+		}
+    }
+}
+
+.small-images{
+	.shot{
+		width: 12%;
+
+		h1{
+			font-size: 0.8em;
+		}
+
+		p{
+			font-size: 0.55em;
+		}
+
+		button{
+			font-size: 0.6em;
+		}
 	}
+}
+
+/* =========== END OF HOME PAGE STYLES =========== */  
+
+/* ============== DETAIL PAGE STYLES ============= */ 
+
+	.detail{
+		border: 1px solid $primary-green;
+	    background-color: $grey;
+		width: 90%;
+		margin: 30px auto;
+		
+		@include border-radius(4px);
+
+		div{
+			width: 100%;
+
+			h1{
+				color: $light-green;
+				width: 100%;
+				text-align: center;
+				font-size: 1.5em;
+				margin-bottom: 20px;
+				padding: 20px 0;
+				background-color: $dark-blue;
+			}
+		}
+
+		#shot-image{
+			width: 100%;
+			text-align:center;
+		}
+
+		#author-info{
+			display: flex;
+			padding: 10px 0;
+			background-color: $light-blue;
+			margin: 20px 0;
+			flex-direction: column;
+
+			h2{
+				color: $light-green;
+				margin: 10px;
+				font-size: 1.5em;
+				text-align: center
+			}
+
+			#author-avatar{
+				text-align: center;
+
+				img{
+					@include border-radius(100%);
+				}
+			}
+
+			#author-name{
+				text-align: center;
+				margin: 5px 0;
+				h3{
+					color: $light-green;
+					font-size: 1.1em;
+				}
+			}
+
+			ul{ 
+				
+				background-color: $white;
+				padding: 20px;
+
+				li{
+					padding: 10px 5px;
+
+					P{
+						font-weight: bold;
+						color: $dark-green;
+
+						strong{
+							color: $light-blue;
+							font-weight: normal;
+						}
+					}
+				}
+
+				li:nth-child(even){
+					background-color: $light-grey;
+				}
+				
+			}
+
+		}
+
+		#shot-info{
+			display: flex;
+			padding: 10px 0;
+			background-color: $primary-green;
+			margin: 20px 0;
+			flex-direction: column;
+
+			h2{
+				color: $light-blue;
+				margin: 10px 0 20px;
+				font-size: 1.5em;
+				text-align: center
+			}
+
+			ul{ 
+				
+				background-color: $white;
+				padding: 20px;
+
+				li{
+					padding: 10px 5px;
+
+					P{
+						font-weight: bold;
+						color: $dark-blue;
+
+						strong{
+							color: $dark-green;
+							font-weight: normal;
+						}
+					}
+				}
+
+				li:nth-child(even){
+					background-color: $light-grey;
+				}
+				
+			}
+		}
+	}
+
+/* =========== END OF DETAIL PAGE STYLES ========= */ 
+
+
+/* ===============================================
+   ================ Tablet Style ================= 
+   =============================================== */
+
+@media only screen and (max-width : 960px) {
+
+	/* ============== HOME PAGE STYLES ============== */  
+
+	.shots-list {
+		.shot{ 
+			width: 45%;
+
+			h1{
+				font-size: 0.9em;
+			}
+
+			p{
+				font-size: 0.6em;
+			}
+		}
+	}
+
+	.small-images{
+		.shot{
+			width: 20%;
+
+			h1{
+				font-size: 0.6em;
+			}
+
+			p{
+				font-size: 0.4em;
+			}
+
+			button{
+				font-size: 0.55em;
+			}
+		}
+	}
+
+	/* =========== END OF HOME PAGE STYLES =========== */
+
+
+}
+
+/* ===============================================
+   =============== Cellphone Style =============== 
+   =============================================== */
+
+@media only screen and (max-width : 480px) {
+
+	/* ============== HOME PAGE STYLES =============== */  
+
+	.shots-list {
+		.shot{ 
+			width: 100%;
+			margin: 10px 10px;
+
+			h1{
+				font-size: 0.8em;
+			}
+
+			p{
+				font-size: 0.6em;
+			} 
+
+			button{
+				font-size: 0.6em; 
+			}
+		}
+	}
+
+	.small-images{
+		.shot{
+			width: 43%;
+
+			h1{
+				font-size: 0.6em;
+			}
+
+			p{
+				font-size: 0.4em;
+			}
+
+			button{
+				font-size: 0.4em;
+			}
+		}
+	}
+
+	/* =========== END OF HOME PAGE STYLES =========== */  
+
+
+	/* =============== DETAIL PAGE STYLES ============ */ 
+
+	.detail{
+
+		#shot-image{
+
+			img{
+				width: 100%;
+			}
+
+		}
+
+	}
+
+
+	/* =========== END OF DETAIL PAGE STYLES ========= */ 
+
 }

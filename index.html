@@ -1,25 +1,41 @@
 <html ng-app="inspireIt">
-<head>
-	<meta charset="UTF-8">
-	<title>Inspire It - Get inspired</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
-	<script src="node_modules/angular/angular.js"></script>
-	<script src="node_modules/angular-route/angular-route.js"></script>
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
-	<script src="js/app.js"></script>
-
-	<script src="js/controllers/inspireItCtrl.js"></script>
-
-	<script src="js/config/routeConfig.js"></script>
-
-	<script src="js/interceptors/loadingInterceptor.js"></script>
-
-</head>
-<body>
-	<div>
-		<div ng-view></div>
-	</div>
-</body>
+        <title>Inspire It - Get inspired</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="node_modules/angular/angular.js"></script>
+        <script src="node_modules/angular-route/angular-route.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/inspireItCtrl.js"></script>
+        <script src="js/config/routeConfig.js"></script>
+        <script src="js/interceptors/loadingInterceptor.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>
+                <img src="images/logotipo-inspire-it.png" alt="Inspire It!" title="Inspire It!" />
+            </h1>
+            <button id="menu-button">MENU</button>
+        </header>
+        <section id="menu">
+            <nav>
+            	<button>animated</button>
+            	<button>attachments</button>
+            	<button>debuts</button>
+            	<button>playoffs</button>
+            	<button>rebounds</button>
+            	<button>teams</button>
+            </nav>
+            <button id="change-size-button">
+            	Tamanho
+            </button>
+        </section>
+        <div id="content" ng-view></div>
+        <footer>
+            <p>Copyright 2017 - Diego Hernandes Ferraz</p>
+        </footer>
+    </body>
 </html>

@@ -1,0 +1,106 @@
+@import "colors";
+@import "mixins";
+
+header {
+	padding: 10px;
+
+	h1{
+		width: 100%;
+		text-align: center;
+	}
+
+	button {
+    	display: none;
+	}	
+}
+
+#menu{
+	background-color: $primary-blue;
+	padding: 10px;
+	justify-content: space-between;
+	@include smooth-box-shadow(0px, 2px, 8px, -1px);
+	
+	button{
+		background-color: $light-blue;
+	    border: 1px solid $dark-blue;
+	    color: $light-text;
+	    cursor: pointer;
+	    margin: 0 10px;
+	    padding: 10px;
+	    text-transform: uppercase;
+	    transition: background-color 0.5s ease;
+	    @include border-radius(4px);
+
+		&:hover, &:focus {
+			background-color: $dark-blue;
+		}
+	}
+
+}
+
+footer{
+	background-color: $primary-blue;
+	color: $light-text;
+	display: block;
+	padding: 20px 0;
+	width: 100%;
+	p{
+		display: block;
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width : 960px) {
+
+	#menu {
+		button{
+			margin: 0px 1px;
+			padding: 10px 2px;
+			font-size: 10px;
+		}
+	}
+
+}
+
+@media only screen and (max-width : 480px) {
+
+	header {
+		
+		justify-content: space-between;
+
+		#menu-button{
+			display: block;
+			color: $white;
+			background-color: $primary-green;
+			border: 1px solid $dark-green;
+			padding: 5px 20px;
+			@include border-radius(4px);
+		}
+
+		h1{
+			width: 40%;
+
+			img{
+				width: 100%;
+			}
+		}
+	}
+
+	#menu {
+		flex-wrap: wrap;
+		
+		nav{
+			flex-direction: column;
+			flex-wrap: wrap;
+			width: 480px;
+		}
+
+		#change-size-button{
+			background-color: $primary-green;
+			clear: both;
+			width: 480px;
+			margin-top: 15px;
+		}
+	}
+
+}
