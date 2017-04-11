@@ -20,11 +20,14 @@
             <button id="menu-button">MENU</button>
         </header>
 
+        <!-- Loading Block -->
         <div ng-show="loading" id="loading-frame">
             <img src="images/loading.svg">    
         </div>
 
+        <!-- Content Block -->
         <div id="content" ng-hide="loading" ng-view></div>
+        
         <footer>
             <p>Copyright 2017 - Diego Hernandes Ferraz</p>
         </footer>

@@ -1,0 +1,24 @@
+<html ng-app="inspireIt">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <title>Inspire It - Get inspired</title>
+        <link rel="stylesheet" type="text/css" href="css/styles.min.css">      
+    </head>
+    <body>
+        <header>
+            <h1>
+                <img src="images/logotipo-inspire-it.png" alt="Inspire It!" title="Inspire It!" />
+            </h1>
+            <button id="menu-button">MENU</button>
+        </header>
+        <div ng-show="loading" id="loading-frame">
+            <img src="images/loading.svg">    
+        </div>
+        <div id="content" ng-hide="loading" ng-view></div>
+        <footer>
+            <p>Copyright 2017 - Diego Hernandes Ferraz</p>
+        </footer>
+        <script src="js/scripts.min.js"></script>
+    </body>
+</html>
