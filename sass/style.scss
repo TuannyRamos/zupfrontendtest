@@ -10,7 +10,7 @@
 /* ============== HOME PAGE STYLES ============== */  
 
 .shots-list {
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     justify-content: space-around;
 
     .shot{
@@ -20,6 +20,8 @@
 	    margin: 30px 10px;
 	    overflow: hidden;
 	    width: 22%;
+	    justify-content: space-between;
+
 	    @include border-radius(4px);
 
 	    h1{
@@ -40,7 +42,7 @@
 		    }
 	    }
 
-	    button{
+	    a{
 	    	background-color: $primary-green;
 		    border: 0 none;
 		    color: $primary-blue;
@@ -48,6 +50,8 @@
 		    font-weight: bold;
 		    padding: 15px;
 		    text-transform: uppercase;
+		    text-align: center;
+			text-decoration: none;
 	    }
 
    		.shot-image {
@@ -70,7 +74,7 @@
 
 .small-images{
 	.shot{
-		width: 12%;
+		width: 13%;
 
 		h1{
 			font-size: 0.8em;
@@ -80,7 +84,7 @@
 			font-size: 0.55em;
 		}
 
-		button{
+		a{
 			font-size: 0.6em;
 		}
 	}
@@ -253,7 +257,7 @@
 				font-size: 0.4em;
 			}
 
-			button{
+			a{
 				font-size: 0.55em;
 			}
 		}
@@ -285,7 +289,7 @@
 				font-size: 0.6em;
 			} 
 
-			button{
+			a{
 				font-size: 0.6em; 
 			}
 		}
@@ -303,7 +307,7 @@
 				font-size: 0.4em;
 			}
 
-			button{
+			a{
 				font-size: 0.4em;
 			}
 		}

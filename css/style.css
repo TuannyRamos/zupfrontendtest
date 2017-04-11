@@ -36,7 +36,7 @@ header {
   header h1 {
     width: 100%;
     text-align: center; }
-  header button {
+  header button, header #menu a, #menu header a {
     display: none; }
 
 #menu {
@@ -46,7 +46,7 @@ header {
   -webkit-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.25);
   -moz-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.25);
   box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.25); }
-  #menu button {
+  #menu button, #menu a {
     background-color: #375f7b;
     border: 1px solid #000f27;
     color: #ffffff;
@@ -59,8 +59,10 @@ header {
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
     border-radius: 4px; }
-    #menu button:hover, #menu button:focus {
+    #menu button:hover, #menu a:hover, #menu button:focus, #menu a:focus {
       background-color: #000f27; }
+  #menu a {
+    text-decoration: none; }
 
 footer {
   background-color: #00354f;
@@ -72,8 +74,21 @@ footer {
     display: block;
     text-align: center; }
 
+#loading-frame {
+  background-color: rgba(1, 1, 1, 0.5);
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+  #loading-frame img {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+
 @media only screen and (max-width: 960px) {
-  #menu button {
+  #menu button, #menu a {
     margin: 0px 1px;
     padding: 10px 2px;
     font-size: 10px; } }
@@ -121,6 +136,7 @@ footer {
     margin: 30px 10px;
     overflow: hidden;
     width: 22%;
+    justify-content: space-between;
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     -ms-border-radius: 4px;
@@ -138,14 +154,16 @@ footer {
       padding: 0 10px; }
       .shots-list .shot p strong {
         color: #000; }
-    .shots-list .shot button {
+    .shots-list .shot a {
       background-color: #a4c139;
       border: 0 none;
       color: #00354f;
       cursor: pointer;
       font-weight: bold;
       padding: 15px;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      text-align: center;
+      text-decoration: none; }
     .shots-list .shot .shot-image {
       margin: 0 10px; }
       .shots-list .shot .shot-image img {
@@ -158,12 +176,12 @@ footer {
         width: 50%; }
 
 .small-images .shot {
-  width: 12%; }
+  width: 13%; }
   .small-images .shot h1 {
     font-size: 0.8em; }
   .small-images .shot p {
     font-size: 0.55em; }
-  .small-images .shot button {
+  .small-images .shot a {
     font-size: 0.6em; }
 
 /* =========== END OF HOME PAGE STYLES =========== */
@@ -270,7 +288,7 @@ footer {
       font-size: 0.6em; }
     .small-images .shot p {
       font-size: 0.4em; }
-    .small-images .shot button {
+    .small-images .shot a {
       font-size: 0.55em; }
   /* =========== END OF HOME PAGE STYLES =========== */ }
 
@@ -286,7 +304,7 @@ footer {
       font-size: 0.8em; }
     .shots-list .shot p {
       font-size: 0.6em; }
-    .shots-list .shot button {
+    .shots-list .shot a {
       font-size: 0.6em; }
   .small-images .shot {
     width: 43%; }
@@ -294,7 +312,7 @@ footer {
       font-size: 0.6em; }
     .small-images .shot p {
       font-size: 0.4em; }
-    .small-images .shot button {
+    .small-images .shot a {
       font-size: 0.4em; }
   /* =========== END OF HOME PAGE STYLES =========== */
   /* =============== DETAIL PAGE STYLES ============ */

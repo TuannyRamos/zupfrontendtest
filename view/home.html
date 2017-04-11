@@ -1,162 +1,38 @@
-<section class="shots-list small-images">
-	<article class="shot">
-		<h1>Tokyo Gifathon Day 8</h1>
-		<p>created by: <strong>Brenttton</strong></p>
+<section id="menu">
+    <nav>
+    	<button ng-click="getShotsByType('animated')">animated</button>
+    	<button ng-click="getShotsByType('attachments')">attachments</button>
+    	<button ng-click="getShotsByType('debuts')">debuts</button>
+    	<button ng-click="getShotsByType('playoffs')">playoffs</button>
+    	<button ng-click="getShotsByType('rebounds')">rebounds</button>
+    	<button ng-click="getShotsByType('teams')">teams</button>
+    </nav>
+    <button id="change-size-button" ng-click="smallerShots = !smallerShots">
+    	Tamanho
+    </button>
+</section>
+
+<section class="shots-list {{(smallerShots) ? 'small-images' : 'large-images'}}">
+	
+	<article class="shot" ng-repeat="shot in shotList">
+		<h1>{{shot.title}}</h1>
+		<p>created by: <strong>{{shot.user.username}}</strong></p>
 		<div class="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
+			<img ng-src="{{shot.images.normal}}" alt="{{shot.title}}" title="{{shot.title}}" />
 		</div>
 		<div class="shot-info">
 			<ul>
 				<li>
 					<strong>Views:</strong>
-					<p>1,265</p>
+					<p>{{shot.views_count}}</p>
 				</li>
 				<li>
 					<strong>Likes:</strong>
-					<p>380</p>
+					<p>{{shot.likes_count}}</p>
 				</li>
 			</ul>
 		</div>
-		<button>Ver mais detalhes</button>
+		<a href="#/details/{{shot.id}}">Ver mais detalhes</a>
 	</article>
-	<article class="shot">
-		<h1>Tokyo Gifathon Day 8</h1>
-		<p>created by: <strong>Brenttton</strong></p>
-		<div class="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
-		</div>
-		<div class="shot-info">
-			<ul>
-				<li>
-					<strong>Views:</strong>
-					<p>1,265</p>
-				</li>
-				<li>
-					<strong>Likes:</strong>
-					<p>380</p>
-				</li>
-			</ul>
-		</div>
-		<button>Ver mais detalhes</button>
-	</article>
-	<article class="shot">
-		<h1>Tokyo Gifathon Day 8</h1>
-		<p>created by: <strong>Brenttton</strong></p>
-		<div class="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
-		</div>
-		<div class="shot-info">
-			<ul>
-				<li>
-					<strong>Views:</strong>
-					<p>1,265</p>
-				</li>
-				<li>
-					<strong>Likes:</strong>
-					<p>380</p>
-				</li>
-			</ul>
-		</div>
-		<button>Ver mais detalhes</button>
-	</article>
-	<article class="shot">
-		<h1>Tokyo Gifathon Day 8</h1>
-		<p>created by: <strong>Brenttton</strong></p>
-		<div class="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
-		</div>
-		<div class="shot-info">
-			<ul>
-				<li>
-					<strong>Views:</strong>
-					<p>1,265</p>
-				</li>
-				<li>
-					<strong>Likes:</strong>
-					<p>380</p>
-				</li>
-			</ul>
-		</div>
-		<button>Ver mais detalhes</button>
-	</article>
-	<article class="shot">
-		<h1>Tokyo Gifathon Day 8</h1>
-		<p>created by: <strong>Brenttton</strong></p>
-		<div class="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
-		</div>
-		<div class="shot-info">
-			<ul>
-				<li>
-					<strong>Views:</strong>
-					<p>1,265</p>
-				</li>
-				<li>
-					<strong>Likes:</strong>
-					<p>380</p>
-				</li>
-			</ul>
-		</div>
-		<button>Ver mais detalhes</button>
-	</article>
-	<article class="shot">
-		<h1>Tokyo Gifathon Day 8</h1>
-		<p>created by: <strong>Brenttton</strong></p>
-		<div class="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
-		</div>
-		<div class="shot-info">
-			<ul>
-				<li>
-					<strong>Views:</strong>
-					<p>1,265</p>
-				</li>
-				<li>
-					<strong>Likes:</strong>
-					<p>380</p>
-				</li>
-			</ul>
-		</div>
-		<button>Ver mais detalhes</button>
-	</article>
-	<article class="shot">
-		<h1>Tokyo Gifathon Day 8</h1>
-		<p>created by: <strong>Brenttton</strong></p>
-		<div class="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
-		</div>
-		<div class="shot-info">
-			<ul>
-				<li>
-					<strong>Views:</strong>
-					<p>1,265</p>
-				</li>
-				<li>
-					<strong>Likes:</strong>
-					<p>380</p>
-				</li>
-			</ul>
-		</div>
-		<button>Ver mais detalhes</button>
-	</article>
-	<article class="shot">
-		<h1>Tokyo Gifathon Day 8</h1>
-		<p>created by: <strong>Brenttton</strong></p>
-		<div class="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
-		</div>
-		<div class="shot-info">
-			<ul>
-				<li>
-					<strong>Views:</strong>
-					<p>1,265</p>
-				</li>
-				<li>
-					<strong>Likes:</strong>
-					<p>380</p>
-				</li>
-			</ul>
-		</div>
-		<button>Ver mais detalhes</button>
-	</article>
+	
 </section>

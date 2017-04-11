@@ -9,9 +9,7 @@ angular.module("inspireIt").factory("loadingInterceptor", function ($q, $rootSco
 			return $q.reject(rejection);
 		},
 		response: function (response) {
-			$timeout(function () {
-				$rootScope.loading = false;
-			}, 500);
+			$rootScope.loading = false;
 			return response;
 		},
 		responseError: function (rejection) {

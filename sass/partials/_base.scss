@@ -36,6 +36,11 @@ header {
 		}
 	}
 
+	a{
+		@extend button;
+		text-decoration: none;
+	}
+
 }
 
 footer{
@@ -48,6 +53,22 @@ footer{
 		display: block;
 		text-align: center;
 	}
+}
+
+#loading-frame {
+	background-color: $transparent;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    img{
+	    left: 50%;
+	    position: absolute;
+	    top: 50%;
+	    transform: translate(-50%, -50%);
+    }
 }
 
 @media only screen and (max-width : 960px) {

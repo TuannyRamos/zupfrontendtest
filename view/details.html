@@ -1,46 +1,53 @@
+<section id="menu">
+    <nav>
+    	<a href="#/home">Voltar</a>
+    </nav>
+    
+</section>
+
 <section class="detail">
 	<div>
 
-		<h1>TITULO</h1>
+		<h1>{{shotDetail.title}}</h1>
 
 		<div id="shot-image">
-			<img src="https://cdn.dribbble.com/users/1358412/screenshots/3421947/two_1x.jpg" alt="" title="" />
+			<img ng-src="{{shotDetail.images.normal}}" alt="{{shotDetail.title}}" title="{{shotDetail.title}}" />
 		</div>
 
 		<div id="author-info">
 			<h2>Informações sobre o autor</h2>
 			<div>
 				<div id="author-avatar">
-					<img src="https://cdn.dribbble.com/users/1358412/avatars/normal/7df33c5c1f2400b73c905b5f1d8c820b.jpg?1486301861" alt="" title="">
+					<img ng-src="{{shotDetail.user.avatar_url}}" alt="{{shotDetail.user.name}}" title="{{shotDetail.user.name}}" />
 				</div>
 				<div id="author-name">
-					<h3>Brenttton</h3>
+					<h3>{{shotDetail.user.name}}</h3>
 				</div>
 			</div>
 			<ul>
 				<li>
 					<p>
-					ID: <strong>2345678</strong>
+					ID: <strong>{{shotDetail.user.id}}</strong>
 					</p>
 				</li>
 				<li>
 					<p>
-					location: <strong>Beijing</strong>
+					Localização: <strong>{{shotDetail.user.location}}</strong>
 					</p>
 				</li>
 				<li>
 					<p>
-					username: <strong>Brenttton</strong>
+					Username: <strong>{{shotDetail.user.username}}</strong>
 					</p>
 				</li>
 				<li>
 					<p>
-					shots_count: <strong>2345678</strong>
+					Quantidade de shots: <strong>{{shotDetail.user.shots_count}}</strong>
 					</p>
 				</li>
 				<li>
 					<p>
-					likes_count: <strong>2345678</strong>
+					Quantidade de likes: <strong>{{shotDetail.user.likes_count}}</strong>
 					</p>
 				</li>
 			</ul>
@@ -51,27 +58,27 @@
 			<ul>
 				<li>
 					<p>
-					description: <strong>Have a nice day :)</strong>
+					Descrição: <strong>{{shotDetail.description}}</strong>
 					</p>
 				</li>
 				<li>
 					<p>
-					views_count: <strong>273</strong>
+					Quantidade de views: <strong>{{shotDetail.views_count}}</strong>
 					</p>
 				</li>
 				<li>
 					<p>
-					comments_count: <strong>33</strong>
+					Quantidade de comentarios: <strong>{{shotDetail.comments_count}}</strong>
 					</p>
 				</li>
 				<li>
 					<p>
-					created_at: <strong>2345678</strong>
+					Data de criação: <strong>{{shotDetail.created_at | date:"dd/MM/yyyy"}}</strong>
 					</p>
 				</li>
 				<li>
 					<p>
-					updated_at: <strong>2345678</strong>
+					Data de atualização: <strong>{{shotDetail.updated_at | date:"dd/MM/yyyy"}}</strong>
 					</p>
 				</li>
 			</ul>
