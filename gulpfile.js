@@ -66,6 +66,6 @@ gulp.task('cssmin', function () {
 });
 
 
-gulp.task('default', function (cb) {
+gulp.task('production', function (cb) {
 	return runSequence(['clean','sass'], ['jshint', 'uglify', 'htmlmin', 'cssmin', 'copyIndex', 'copyImages'], cb)
 });
