@@ -15,13 +15,15 @@ Após isto basta seguir os passos abaixo:
 npm install 
 ```
 
-# Build do projeto
+# Para executar o projeto
 
 ```
-gulp production
+npm start
 ```
 
-# Abrir o projeto
+# Utilizar o projeto
 
-Para visualizar o projeto basta abrir o arquivo index.html dentro da pasta ``production`` criada no build.
-Recomendo o uso do navegado Firefox para a visualização. O navegador Chrome bloqueia chamadas HTTP de arquivos locais, mas caso seja necessário testar o projeto neste navegador disponibilizei no link ``http://labs-diegohferraz.rhcloud.com/frontendtest/`` o acesso a última versão buildada do projeto.
+Basta abrir o navegador e acessar o seguinte endereço:
+```
+http://localhost:8080/
+```

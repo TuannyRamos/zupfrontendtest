@@ -2,9 +2,9 @@
   "name": "zupfrontendtest",
   "version": "1.0.0",
   "description": "this is a test project designed to show up my skills",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp production && node server.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "angular": "1.4.10",
     "angular-route": "1.4.10",
     "event-stream": "^3.3.4",
+    "express": "^4.15.2",
     "gulp": "~3.9.1",
     "gulp-clean": "^0.3.2",
     "gulp-clean-css": "^3.0.4",
